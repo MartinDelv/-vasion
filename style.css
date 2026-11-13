@@ -60,3 +60,90 @@
   letter-spacing:.035em;
   border-top:1px solid rgba(154,55,79,.35);
 }
+
+
+/* Mobile refinement: compact spacing, readable type and comfortable touch targets */
+@media (max-width: 480px) {
+  html { scroll-padding-top: 70px; }
+  body { font-size: 14px; }
+  .topbar {
+    height: 62px;
+    padding-left: max(18px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
+    gap: 10px;
+  }
+  .brand { font-size: 23px; gap: 7px; }
+  .brand-mark { font-size: 29px; }
+  .brand small { font-size: 9px; }
+  .menu-toggle { min-width: 44px; min-height: 44px; justify-content: center; align-items: center; }
+  .nav { top: 62px; padding: 10px 22px 20px; max-height: calc(100dvh - 62px); overflow-y: auto; }
+  .nav a { min-height: 44px; display: flex; align-items: center; font-size: 17px; }
+  .hero {
+    min-height: 590px;
+    height: min(720px, 100svh);
+    padding: 92px 22px 70px;
+    align-items: center;
+  }
+  .hero-copy { width: 100%; max-width: 100%; margin-top: 0; }
+  .hero h1 { font-size: clamp(68px, 19vw, 94px); }
+  .hero-title-wrap { margin-top: 24px; }
+  .hero-sub { margin: 24px 0 27px 3%; font-size: 19px; line-height: 1.35; }
+  .hero-copy .button { margin-left: 3%; }
+  .button { min-height: 46px; padding: 12px 18px; gap: 22px; }
+  .eyebrow { max-width: 260px; line-height: 1.8; letter-spacing: .15em; }
+  .ornament { left: 32%; }
+  .ornament.right { right: 1%; }
+  .hero-index { bottom: -78px; }
+  .scroll-cue { display: none; }
+  .moon { width: 118px; height: 118px; right: 0; top: 17%; }
+  .window { width: 190px; height: 300px; right: -25%; top: 2%; }
+  .king { font-size: 145px; right: 4%; bottom: 52px; }
+  .pawn { font-size: 88px; right: -8%; bottom: 15px; }
+  .rose-a { right: 48%; bottom: 55px; font-size: 76px; }
+  .rose-b { font-size: 72px; }
+  .section { padding-left: 22px; padding-right: 22px; }
+  .intro, .rules, .members, .chats { padding-top: 64px; padding-bottom: 66px; }
+  .intro h2, .section-heading h2, .games h2 { font-size: clamp(39px, 11vw, 52px); }
+  .intro-text > p:not(.overline) { font-size: 17px; line-height: 1.65; }
+  .intro-cards { gap: 12px; margin-top: 24px; }
+  .feature-card { min-height: 0; padding: 24px 18px; }
+  .manifesto { min-height: 270px; height: auto; padding: 55px 22px; }
+  .manifesto h2 { font-size: clamp(32px, 9vw, 43px); }
+  .manifesto p { font-size: 16px; line-height: 1.5; }
+  .section-heading { margin-bottom: 30px; }
+  .section-heading > p { font-size: 13px; line-height: 1.65; }
+  .rule summary { grid-template-columns: 36px minmax(0, 1fr) 22px; gap: 8px; padding: 19px 2px; }
+  .rule summary b { font-size: 20px; line-height: 1.2; }
+  .rule > p { margin: 0 5px 20px 44px; font-size: 13px; line-height: 1.7; }
+  .member-grid, .chat-grid { gap: 14px; }
+  .member-image { height: 195px; }
+  .member-info { padding: 18px 18px 20px; }
+  .chat-grid-two { grid-template-columns: minmax(0, 1fr); gap: 15px; }
+  .chat-grid-two .chat-card {
+    min-height: 0;
+    padding: 25px 22px 54px;
+  }
+  .chat-grid-two .chat-card .chat-symbol { margin: 25px 0 7px; font-size: 36px; }
+  .chat-grid-two .chat-card h3 { font-size: clamp(31px, 9vw, 40px); overflow-wrap: anywhere; }
+  .chat-grid-two .chat-card p { max-width: 100%; font-size: 15px; line-height: 1.5; }
+  .chat-grid-two .chat-watermark { font-size: 150px; right: 8px; top: 4px; }
+  .chat-grid-two .chat-card .elegant-label { font-size: 1.04em; }
+  .chat-grid-two .chat-card .age-confirmation { max-width: 100%; font-size: 14px; line-height: 1.45; }
+  .card-arrow { right: 20px; bottom: 17px; }
+  .transfer-panel { padding: 21px 18px; }
+  .transfer-panel h3 { font-size: 24px; line-height: 1.2; }
+  .games { padding: 48px 22px 58px; gap: 0; }
+  .games-art { height: 205px; }
+  .giant-type { font-size: clamp(65px, 18vw, 92px); }
+  .red-orb { width: 205px; height: 205px; }
+  .join { padding: 58px 22px; }
+  .join-frame { padding: 48px 17px; }
+  .join h2 { font-size: clamp(43px, 12vw, 60px); }
+  .join-frame > p:not(.overline) { font-size: 16px; line-height: 1.5; }
+  footer { padding: 27px 22px 18px; }
+  .footer-top { align-items: flex-start; }
+  .footer-bottom { flex-direction: column; gap: 9px; }
+}
+@media (hover: none) {
+  .chat-card:hover, .button:hover { transform: none; box-shadow: none; }
+}
