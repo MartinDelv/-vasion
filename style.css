@@ -35,3 +35,28 @@
   .chat-grid-two .chat-watermark{font-size:185px;right:12px;top:8px}
   .chat-grid-two .chat-card p{max-width:250px}
 }
+
+
+/* Elegant access labels and age-confirmation note for featured chat spaces */
+.chat-grid-two .chat-card .elegant-label{
+  display:inline-block;
+  margin:2px 0 5px;
+  padding:2px 9px 4px;
+  color:#e2b8c2;
+  font:italic 600 1.08em/1.1 "Cormorant Garamond",serif;
+  letter-spacing:.045em;
+  border-bottom:1px solid rgba(190,91,116,.55);
+  text-shadow:0 0 13px rgba(183,55,85,.22);
+}
+.chat-grid-two .chat-card .age-confirmation{
+  position:relative;
+  z-index:1;
+  display:block;
+  max-width:290px;
+  margin-top:15px;
+  padding-top:10px;
+  color:#c18b98;
+  font:italic 14px/1.45 "Cormorant Garamond",serif;
+  letter-spacing:.035em;
+  border-top:1px solid rgba(154,55,79,.35);
+}
